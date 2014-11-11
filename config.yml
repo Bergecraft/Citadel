@@ -5,13 +5,17 @@ general:
   redstoneDistance: 9
   groupsAllowed: 60
   reinforcedCrops: true
-  bypassLoss: 0
+  bypassLoss: 50
   fireSuppression: 2
 materials:
 - name: STONE
   strength: 25
   requirements: 1
   flasher: STONE
+- name: GOLD_INGOT
+  strength: 100
+  requirements: 1
+  flasher: GOLD_BLOCK
 - name: IRON_INGOT
   strength: 250
   requirements: 1
