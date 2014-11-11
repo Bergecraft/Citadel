@@ -38,6 +38,9 @@ public class ConfigManager {
     private int batchUpdateSize;
     private int batchUpdateTimeoutMs;
 
+    public double bypassLoss;
+    public int fireSuppression;
+    
 	public void load(){
 		Citadel.getPlugin().reloadConfig();
 		FileConfiguration config = Citadel.getPlugin().getConfig();
@@ -67,6 +70,8 @@ public class ConfigManager {
                 }
             }
         }
+        bypassLoss = config.getDouble("general.bypassLoss",0);
+        fireSuppression = config.getInt("general.fireSuppression",2);
         cacheMaxAge = config.getLong("caching.max_age");
         cacheMaxChunks = config.getInt("caching.max_chunks");
         for (Object obj : config.getList("materials")) {

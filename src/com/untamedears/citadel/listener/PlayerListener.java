@@ -201,7 +201,7 @@ public class PlayerListener implements Listener {
                         boolean immature =
                             timeUntilMature(reinforcement) != 0
                             && (Citadel.getConfigManager().maturationEnabled()
-                                || Citadel.getConfigManager().getAcidBlockType() == block.getTypeId());
+                                || (block!=null && Citadel.getConfigManager().getAcidBlockType() == block.getTypeId()));
                         boolean is_personal_group = false;
                         String groupName = "!NULL!";
                         if (group != null) {
